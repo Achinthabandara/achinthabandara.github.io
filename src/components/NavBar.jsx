@@ -59,19 +59,20 @@ const NavBar = () => {
     >
       <Container>
         {data?.logo && (
-          <Navbar.Brand href="/">
-            <img
-              src={data?.logo?.source}
-              className="d-inline-block align-top"
-              alt="main logo"
-              style={
-                data?.logo?.height && data?.logo?.width
-                  ? { height: data?.logo?.height, width: data?.logo?.width }
-                  : styles.logoStyle
-              }
-            />
-          </Navbar.Brand>
-        )}
+  <Navbar.Brand href="/">
+    <img
+      src={data?.logo?.source}
+      className="d-inline-block align-top"
+      alt="main logo"
+      style={
+        data?.logo?.height && data?.logo?.width
+          ? { height: data?.logo?.height, width: data?.logo?.width }
+          : styles.logoStyle
+      }
+    />
+  </Navbar.Brand>
+)}
+            
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => setExpanded(!expanded)}
