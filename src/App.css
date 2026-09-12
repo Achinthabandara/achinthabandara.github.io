@@ -247,3 +247,40 @@
   flex-wrap: wrap;
   gap: var(--space-2);
 }
+
+/* ---- Fixed navbar / section spacing ------------------------------------ */
+
+.MainApp {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Keep section headings below the fixed navbar */
+.header {
+  scroll-margin-top: 100px;
+  margin-top: var(--space-7);
+}
+
+/* Give every section enough space below its content */
+.section-content-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-5) 100px;
+  box-sizing: border-box;
+}
+
+.navbar-custom {
+  min-height: 70px;
+}
+
+.header {
+  scroll-margin-top: 80px;
+}
