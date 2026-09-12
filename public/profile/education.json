@@ -1,19 +1,16 @@
 {
-    "education":[
-        {
-            "title": "Jun 20XX - Jun 20YY",
-            "cardTitle": "B.Tech, Computer Science",
-            "cardSubtitle":"XYZ University, City",
-            "cardDetailedText": "CGPA - 9.5",
-            "icon" : {
-                "src": "images/education/lorem-ipsum.png"
-            }
-        },
-        {
-            "title": "Apr 20XX",
-            "cardTitle": "High School",
-            "cardSubtitle":"ABC School, City",
-            "cardDetailedText": "Marks - 95%"
-        }
-    ]
+  "education": [
+    {
+      "title": "2024 - 2028",
+      "cardTitle": "BSc (Hons) Computing & Information Systems",
+      "cardSubtitle": "Sabaragamuwa University of Sri Lanka",
+      "cardDetailedText": "Department of Computing & Information Systems"
+    },
+    {
+      "title": "G.C.E. Advanced Level",
+      "cardTitle": "Physical Science Stream",
+      "cardSubtitle": "Sri Sumangala Central College - Kandy",
+      "cardDetailedText": "Completed G.C.E. Advanced Level in the Physical Science stream."
+    }
+  ]
 }

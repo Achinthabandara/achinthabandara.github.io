@@ -1,0 +1,59 @@
+/* Skills as a bento: a wide intro tile over a row of category tiles. */
+
+.skills-intro-tile {
+  text-align: left;
+}
+
+.skills-intro-tile p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.skill-category-tile {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.skill-category-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5) var(--space-4);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 84px;
+}
+
+.skill-item img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  transition: transform var(--dur) var(--ease);
+}
+
+.skill-item:hover img {
+  transform: translateY(-4px) scale(1.08);
+}
+
+.skill-item span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.3;
+}

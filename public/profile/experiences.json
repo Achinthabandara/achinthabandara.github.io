@@ -1,33 +1,38 @@
 {
-    "experiences": [
-        {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Full-time",
-            "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
-            ],
-            "dateText": "06/20XX – Present"
-        },
-        {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Internship",
-            "workDescription": [
-                "Worked on abc."
-            ],
-            "dateText": "01/20XX – 05/20XX"
-        },
-        {
-            "title": "App Developer",
-            "subtitle": "ABC Pvt Ltd",
-            "workType": "Freelance",
-            "workDescription": [
-                "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
-                "Done bcd work."
-            ],
-            "dateText": "09/20XX – 01/20YY"
-        }
-    ]
+  "experiences": [
+    {
+      "title": "Vocal Quest - University Capstone Project",
+      "subtitle": "Sabaragamuwa University of Sri Lanka",
+      "workType": "Team Project",
+      "workDescription": [
+        "Worked on the frontend, backend and **UI/UX design** of an AI-driven accessible gaming platform.",
+        "Developed features using **React, Node.js, Express.js and MongoDB**.",
+        "Worked on authentication, routes and accessibility features for users with visual and motor disabilities.",
+        "Designed user flows and interfaces using **Figma**."
+      ],
+      "dateText": "2025 - 2026"
+    },
+    {
+      "title": "RentGo - Vehicle Rental Marketplace",
+      "subtitle": "University Group Project",
+      "workType": "Team Project",
+      "workDescription": [
+        "Worked with a team to develop a mobile vehicle rental marketplace concept.",
+        "Worked with **React Native, Node.js, Express.js and PostgreSQL**.",
+        "Contributed to application features, API integration and project design."
+      ],
+      "dateText": "2025 - 2026"
+    },
+    {
+      "title": "Explore Ceylon",
+      "subtitle": "Personal Project",
+      "workType": "Ongoing",
+      "workDescription": [
+        "Developing a hiking information website focused on mountains and hiking destinations in Sri Lanka.",
+        "Working on information about hiking routes, maps, videos, preparation and accommodation.",
+        "Using this project to improve my **frontend development and web design skills**."
+      ],
+      "dateText": "2026 - Present"
+    }
+  ]
 }

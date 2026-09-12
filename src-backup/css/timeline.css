@@ -1,0 +1,134 @@
+/* Shared elegant timeline used by Experience and Education: a soft vertical
+   rail with node markers and tile-style cards, matching the bento aesthetic. */
+
+.tl {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--timeline-line);
+  border-radius: 2px;
+}
+
+.tl-item {
+  position: relative;
+  padding-left: 64px;
+  padding-bottom: var(--space-6);
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Node markers on the rail */
+.tl-node--dot {
+  position: absolute;
+  left: 12px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.tl-node--icon {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.tl-node--icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Card */
+.tl-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  transition: transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.tl-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.tl-date {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.tl-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.tl-subtitle {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.tl-subtitle .accent {
+  color: var(--accent);
+}
+
+.tl-detail {
+  margin-top: var(--space-3);
+  color: var(--text-muted);
+}
+
+.tl-list {
+  margin: var(--space-4) 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.tl-list li {
+  margin-bottom: var(--space-2);
+}
+
+.tl-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .tl-item { padding-left: 56px; }
+}

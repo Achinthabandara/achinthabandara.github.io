@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Fade } from 'react-awesome-reveal';
-
+import { Link } from 'react-router-dom';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
@@ -51,13 +51,12 @@ function Home() {
             </div>
             {data?.tagline && <p className="hero-tagline">{data.tagline}</p>}
             <div className="hero-cta">
-             <a className="btn-pill btn-accent" href="#projects">
-  View my work
-</a>
-
-<a className="btn-pill btn-ghost" href="#about">
-  About me
-</a>
+              <Link className="btn-pill btn-accent" to="/projects">
+                View my work
+              </Link>
+              <Link className="btn-pill btn-ghost" to="/about">
+                About me
+              </Link>
             </div>
           </div>
 

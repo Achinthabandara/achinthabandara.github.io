@@ -10,7 +10,3 @@ body {
 code {
   font-family: var(--font-mono);
 }
-
-html {
-  scroll-behavior: smooth;
-}
