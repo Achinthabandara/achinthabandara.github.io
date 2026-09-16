@@ -9,18 +9,6 @@ import FallbackSpinner from './FallbackSpinner';
 import '../css/home.css';
 import Particles from './Particles';
 
-function initialsOf(name) {
-  if (!name) return '';
-
-  return name
-    .split(' ')
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join('')
-    .toUpperCase();
-}
-
 function Home() {
   const [data, setData] = useState(null);
 
@@ -59,14 +47,21 @@ function Home() {
           />
         </div>
 
-        {/* Existing Hero Content */}
+        {/* Hero Content */}
         <div className="bento">
+
+          {/* Main Introduction Card */}
           <div className="tile hero-intro span-4 rspan-2">
+
             {data?.status && (
-              <span className="hero-eyebrow">{data.status}</span>
+              <span className="hero-eyebrow">
+                {data.status}
+              </span>
             )}
 
-            <h1 className="hero-name">{data?.name}</h1>
+            <h1 className="hero-name">
+              {data?.name}
+            </h1>
 
             <div className="hero-roles">
               <span>I&apos;m&nbsp;</span>
@@ -81,34 +76,55 @@ function Home() {
             </div>
 
             {data?.tagline && (
-              <p className="hero-tagline">{data.tagline}</p>
+              <p className="hero-tagline">
+                {data.tagline}
+              </p>
             )}
 
             <div className="hero-cta">
-              <a className="btn-pill btn-accent" href="#projects">
+
+              <a
+                className="btn-pill btn-accent"
+                href="#projects"
+              >
                 View my work
               </a>
 
-              <a className="btn-pill btn-ghost" href="#about">
+              <a
+                className="btn-pill btn-ghost"
+                href="#about"
+              >
                 About me
               </a>
+
             </div>
           </div>
 
-          <div className="tile tile--accent monogram span-2">
-            <span className="monogram-mark">
-              {initialsOf(data?.name)}
-            </span>
+          {/* GitHub Profile Card */}
+          <a
+            href="https://github.com/Achinthabandara"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tile github-profile span-2"
+            aria-label="Visit Achintha Bandara GitHub profile"
+          >
+            <img
+              src="/images/github.png"
+              alt="Achintha Bandara GitHub Profile"
+            />
+          </a>
 
-            <span className="monogram-label">
-              {data?.name}
-            </span>
-          </div>
-
+          {/* Social Media Card */}
           <div className="tile hero-social span-2">
-            <span className="tile-label">Find me</span>
+
+            <span className="tile-label">
+              Find me
+            </span>
+
             <Social />
+
           </div>
+
         </div>
 
       </section>
