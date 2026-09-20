@@ -93,24 +93,26 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
 .particles-background {
   position: absolute;
   inset: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
-  
+  pointer-events: none;
 }
 
-.particles-background .particles-container {
+.particles-background canvas {
   width: 100%;
   height: 100%;
 }
 
-.hero .bento {
+.bento {
   position: relative;
   z-index: 1;
 }
@@ -172,4 +174,50 @@
 
 .github-profile:hover img {
   transform: scale(1.03);
+}
+
+
+/* =========================================
+   FULL HOME BACKGROUND
+========================================= */
+
+.home-fade-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.particles-background {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+.particles-background canvas {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+.bento {
+  position: relative;
+  z-index: 2;
 }

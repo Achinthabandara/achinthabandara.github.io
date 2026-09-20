@@ -39,18 +39,7 @@
         "Web Development"
       ]
     },
-    {
-      "title": "RentGo - Vehicle Rental Marketplace",
-      "bodyText": "- A group project concept for a **vehicle rental marketplace** that connects vehicle owners with customers.\n - Worked with React Native, Node.js, Express.js and PostgreSQL.\n - The project includes concepts for maps, location-based services, notifications and online payments.",
-      "tags": [
-        "React Native",
-        "Node.js",
-        "Express.js",
-        "PostgreSQL",
-        "PostGIS",
-        "Maps"
-      ]
-    },
+    
     {
       "title": "The Golden Plate",
       "bodyText": "- A Sri Lankan restaurant website designed to present local food and the restaurant experience.\n - Built the website using **HTML and CSS** with a focus on clean presentation and responsive design.",

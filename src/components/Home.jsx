@@ -6,13 +6,12 @@ import { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
-import '../css/home.css';
 import Particles from './Particles';
+
+import '../css/home.css';
 
 function Home() {
   const [data, setData] = useState(null);
-
-  // Get the current theme
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
@@ -21,18 +20,22 @@ function Home() {
     })
       .then((res) => res.json())
       .then((res) => setData(res))
-      .catch((err) => err);
+      .catch((err) => console.error('Error loading home data:', err));
   }, []);
 
-  // Change particle color depending on the theme
   const particleColor =
-    theme?.bsPrimaryVariant === 'dark' ? '#ffffff' : '#111827';
+    theme?.bsPrimaryVariant === 'dark'
+      ? '#ffffff'
+      : '#111827';
 
-  return data ? (
+  if (!data) {
+    return <FallbackSpinner />;
+  }
+
+  return (
     <Fade triggerOnce className="home-fade-container">
       <section className="hero">
 
-        {/* Particle Background */}
         <div className="particles-background">
           <Particles
             particleColors={[particleColor]}
@@ -47,20 +50,18 @@ function Home() {
           />
         </div>
 
-        {/* Hero Content */}
         <div className="bento">
 
-          {/* Main Introduction Card */}
           <div className="tile hero-intro span-4 rspan-2">
 
-            {data?.status && (
+            {data.status && (
               <span className="hero-eyebrow">
                 {data.status}
               </span>
             )}
 
             <h1 className="hero-name">
-              {data?.name}
+              {data.name}
             </h1>
 
             <div className="hero-roles">
@@ -70,12 +71,12 @@ function Home() {
                 options={{
                   loop: true,
                   autoStart: true,
-                  strings: data?.roles,
+                  strings: data.roles || [],
                 }}
               />
             </div>
 
-            {data?.tagline && (
+            {data.tagline && (
               <p className="hero-tagline">
                 {data.tagline}
               </p>
@@ -98,9 +99,9 @@ function Home() {
               </a>
 
             </div>
+
           </div>
 
-          {/* GitHub Profile Card */}
           <a
             href="https://github.com/Achinthabandara"
             target="_blank"
@@ -114,7 +115,6 @@ function Home() {
             />
           </a>
 
-          {/* Social Media Card */}
           <div className="tile hero-social span-2">
 
             <span className="tile-label">
@@ -129,8 +129,6 @@ function Home() {
 
       </section>
     </Fade>
-  ) : (
-    <FallbackSpinner />
   );
 }
 
